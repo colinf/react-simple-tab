@@ -21,7 +21,7 @@ var SimpleTab = React.createClass({
     },
     
     render() {
-        var tabContent;
+        var TabContent;
         if (this.props.tabs.length > 0)
             TabContent = this.props.tabs[this.state.currentTab].content;
         return (
