@@ -14,7 +14,7 @@ var SimpleTabLabels = React.createClass({
             listStyle: "none",
         }).merge(this.props.style).toJS();
         
-        var labels = this.props.tabs.map(function (tab, index) {
+        var labels = this.props.tabs.map((tab, index) => {
             var style = Immutable.Map({
                 display: "inline-block"
             }).merge(tab.style);
@@ -25,7 +25,7 @@ var SimpleTabLabels = React.createClass({
             return (
                 <SimpleTabLabel title={tab.title} key={index} index={index} onTabChange={this.props.onTabChange} style={style} />
             );
-        }.bind(this));
+        });
 
         return (
             <ul style={style}>
