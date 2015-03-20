@@ -1,6 +1,23 @@
 var React = require("react");
 var Immutable = require("immutable");
 
+var SimpleTabLabel = React.createClass({
+    propTypes: {
+        title: React.PropTypes.any.isRequired,
+        index: React.PropTypes.number.isRequired
+    },
+
+    onClick(e) {
+        this.props.onTabChange(this.props.index);
+    },
+    
+    render() {
+        return (
+            <li style={this.props.style} onClick={this.onClick}>{this.props.title}</li>
+        );
+    }
+});
+
 var SimpleTabLabels = React.createClass({
     propTypes: {
         tabs: React.PropTypes.array.isRequired,
@@ -29,23 +46,6 @@ var SimpleTabLabels = React.createClass({
             <ul style={style}>
                 {labels}
             </ul>
-        );
-    }
-});
-
-var SimpleTabLabel = React.createClass({
-    propTypes: {
-        title: React.PropTypes.any.isRequired,
-        index: React.PropTypes.number.isRequired
-    },
-
-    onClick(e) {
-        this.props.onTabChange(this.props.index);
-    },
-    
-    render() {
-        return (
-            <li style={this.props.style} onClick={this.onClick}>{this.props.title}</li>
         );
     }
 });
