@@ -1,1 +1,1 @@
-module.exports = require("./src/simple-tab");
+module.exports = require("./lib/simple-tab");

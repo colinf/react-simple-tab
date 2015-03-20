@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 'use strict'
 
 var React = require("react");
@@ -14,17 +12,17 @@ var SimpleTab = React.createClass({
         labelListStyle: React.PropTypes.object
     },
 
-    getInitialState: function () {
+    getInitialState() {
         return {
             currentTab: 0
         };
     },
 
-    onTabChange: function (index) {
+    onTabChange(index) {
         this.setState({currentTab: index});
     },
     
-    render: function () {
+    render() {
         var tabContent;
         if (this.props.tabs.length > 0)
             tabContent = this.props.tabs[this.state.currentTab].content;

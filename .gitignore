@@ -1,7 +1,9 @@
 *~
 .#*
+*.log
+.*
+!/.gitignore
 
 node_modules/
 dist/
-js/*.js
 sample/bundle.js

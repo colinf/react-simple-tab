@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 'use strict'
 
 var React = require("react");
@@ -11,7 +9,7 @@ var SimpleTabLabels = React.createClass({
         style: React.PropTypes.object
     },
     
-    render: function () {
+    render() {
         var style = Immutable.Map({
             listStyle: "none",
         }).merge(this.props.style).toJS();
@@ -43,11 +41,11 @@ var SimpleTabLabel = React.createClass({
         index: React.PropTypes.number.isRequired
     },
 
-    onClick: function (e) {
+    onClick(e) {
         this.props.onTabChange(this.props.index);
     },
     
-    render: function () {
+    render() {
         return (
             <li style={this.props.style} onClick={this.onClick}>{this.props.title}</li>
         );
