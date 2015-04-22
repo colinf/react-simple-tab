@@ -1,28 +1,25 @@
-var React = require("react");
-var Immutable = require("immutable");
+import React from 'react';
+import Immutable from 'immutable';
 
-var SimpleTabLabel = React.createClass({
-    propTypes: {
-        title: React.PropTypes.any.isRequired,
-        index: React.PropTypes.number.isRequired
-    },
+class SimpleTabLabel extends React.Component {
 
     onClick(e) {
         this.props.onTabChange(this.props.index);
-    },
+    }
     
     render() {
         return (
-            <li style={this.props.style} onClick={this.onClick}>{this.props.title}</li>
+            <li style={this.props.style} onClick={this.onClick.bind(this)}>{this.props.title}</li>
         );
     }
-});
+}
 
-var SimpleTabLabels = React.createClass({
-    propTypes: {
-        tabs: React.PropTypes.array.isRequired,
-        style: React.PropTypes.object
-    },
+SimpleTableLabel.propTypes = {
+    title: React.PropTypes.any.isRequired,
+    index: React.PropTypes.number.isRequired
+};
+
+export default class SimpleTabLabels extends React.Component {
     
     render() {
         var style = Immutable.Map({
@@ -48,6 +45,9 @@ var SimpleTabLabels = React.createClass({
             </ul>
         );
     }
-});
+}
 
-module.exports = SimpleTabLabels;
+SimpleTabLabels.propTypes= {
+    tabs: React.PropTypes.array.isRequired,
+    style: React.PropTypes.object
+};

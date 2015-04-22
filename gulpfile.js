@@ -4,7 +4,6 @@ var rename = require('gulp-rename');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var babel = require("gulp-babel");
-var streamify = require('gulp-streamify');
 var uglify = require('gulp-uglify');
 var p = require('path');
 
