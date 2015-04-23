@@ -1,7 +1,7 @@
 {
   "author": "Rudolph-Miller",
   "name": "react-simple-tab",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "keywords": [
     "react",
     "react-component",
@@ -11,8 +11,7 @@
   ],
   "description": "tab component in React.js",
   "main": "lib/simple-tab.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/colinf/react-simple-tab"
