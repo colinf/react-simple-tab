@@ -5,7 +5,14 @@ export default class SimpleTab extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {currentTab: 0};
+    this.onTabChange = this.onTabChange.bind(this);
+    this.state = {currentTab: this.props.initialTab};
+  }
+
+  getDefaultProps() {
+      return {
+          initialTab: 0
+      };
   }
 
   onTabChange(index) {
@@ -27,6 +34,7 @@ export default class SimpleTab extends React.Component {
 
 SimpleTab.propTypes = {
   tabs: React.PropTypes.array.isRequired,
+  initialTab: React.PropTypes.number,
   style: React.PropTypes.object,
   labelListStyle: React.PropTypes.object
 };
