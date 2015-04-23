@@ -14,7 +14,7 @@ class SimpleTabLabel extends React.Component {
     }
 }
 
-SimpleTableLabel.propTypes = {
+SimpleTabLabel.propTypes = {
     title: React.PropTypes.any.isRequired,
     index: React.PropTypes.number.isRequired
 };
