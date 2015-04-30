@@ -26,7 +26,7 @@ export default class SimpleTab extends React.Component {
     return (
       <div style={this.props.style}>
         <SimpleTabLabels tabs={this.props.tabs} style={this.props.labelListStyle} onTabChange={this.onTabChange} currentTab={this.state.currentTab} />
-        <TabContent />
+        <TabContent style={this.props.contentStyle}/>
       </div>
     );
   }
@@ -36,5 +36,6 @@ SimpleTab.propTypes = {
   tabs: React.PropTypes.array.isRequired,
   initialTab: React.PropTypes.number,
   style: React.PropTypes.object,
-  labelListStyle: React.PropTypes.object
+  labelListStyle: React.PropTypes.object,
+  contentStyle: React.PropTypes.object
 };
